@@ -135,7 +135,9 @@ let carro3 = "Audi";
 
 const carros = ["BMW", "Mazda", "Audi"];
 
+const carritoCompras = ["Leche", "Tortillas", "Mango", "Maruchan", "Aguacate", "Sandia", "Queso", "Sabritas", "Oreo", "Piña", "Chachitos", "Pollo", "Jamon", "Harina", "Mantequilla", "Chocolate", "Wafflera Plaza Sesamo", "Nutella", "Fresas", "Servilletas", "Xbox Series X"];
 
+const combinacion = [1, "Hola", null, "5"];
 
 
 
