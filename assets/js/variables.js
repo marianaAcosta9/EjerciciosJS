@@ -110,7 +110,31 @@ var colonia = "Italia Providencia";
 var comidaFavorita = "Hamburguesas";
 var nombreGatos = "Kari, Sofía y Olivia";
 
-//Ejercicio corregir
+//Convertir números en String
+
+let x = 123;
+
+String(x) + "<br>" +
+    String(123) + "<br>" +
+    String(100 + 23);
+
+// varios tipos para definir variables
+
+var hola; //javascript viejo
+let hola; //javascript nuevo
+const hola; //variables constantes (no cambian)
+
+// Array Es para declarar varios elementos
+// Si son varios elementos de una misma clase, se declaraban así:
+
+let carro1 = "BMW";
+let carro2 = "Mazda";
+let carro3 = "Audi";
+
+// Es más fácil declararlos así (array):
+
+const carros = ["BMW", "Mazda", "Audi"];
+
 
 
 
