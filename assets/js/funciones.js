@@ -91,3 +91,22 @@ console.log(out());
 const receive = out();
 
 console.log(receive);
+
+//Segundo ejemplo de Output
+    //Función con parámetro y return
+
+function areaRectangulo(b,a) {
+    var resultado = b * a;
+    return resultado;
+}
+
+console.log(areaRectangulo(6,3));
+
+//Tercer ejemplo de Output
+
+function areaTriangulo(b,h) {
+    var resultado = b * h / 2;
+    return resultado;
+}
+
+console.log(areaTriangulo(8,4));
