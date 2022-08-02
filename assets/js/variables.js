@@ -16,7 +16,11 @@
 
 // Seguir un standard personal
 
-//Pueden ocntener numeros, letras, guion bajo, simbolo de dolar
+// Normalizar datos que se van a ingresar
+
+var tel = "+52 448 234 1212"; //En el caso de teléfono sería mejor declarar la variable como string en vez de número. Para poder colocar el signo +
+
+//Pueden contener numeros, letras, guion bajo, simbolo de dolar
 var a;
 var a1;
 var a_nombre;
