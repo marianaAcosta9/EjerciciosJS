@@ -33,7 +33,7 @@ var astigmatismo = 3;
 //Type Boolean
 var ciego = true;
 var hambre = false;
-var bateria = false:
+var bateria = false;
 var ia = true;
 
 //Type String
@@ -55,5 +55,12 @@ var uno = dos = tres = 4;
 
 
 //Tarea, escribir en una sola linea variables de carrito de compras
-
 var queso, cereal, jamon, pan, leche;
+
+let carritoDeCompras = {
+    queso: 4,
+    cereal: 2,
+    jamon: 5,
+    pan: 20,
+    leche: 1,
+}
