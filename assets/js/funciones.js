@@ -110,3 +110,15 @@ function areaTriangulo(b,h) {
 }
 
 console.log(areaTriangulo(8,4));
+
+//Con las comillas hacia atrás permite concatenar dos variables en automático
+
+var a = "hola";
+var b = "Mundo";
+console.log(`Hola ${b}`);
+
+
+//Ejercicio 01
+//Crear una función idCard
+//Variables locales: Nombre, Ubicación y Pasatiempo.
+//Return "Hola, mi nombre es ___. Vivo en ___ y disfruto ____"
