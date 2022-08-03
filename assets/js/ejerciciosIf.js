@@ -15,3 +15,4 @@ if (nacimiento <= 2004) {
 } else {
     alert("Estás muy peque");
 }
+
