@@ -165,7 +165,7 @@ let saludo1 = "Hola, estoy aprendiendo arreglos en Generation";
 let saludo2 = saludo1.slice(3, 7);
 console.log("Imprimimos la rebanada del arreglo original", saludo2);
 
-Sintaxis basica
+/*Sintaxis basica
 
 splice(indice de inicio, cantidad de elementos a eliminar, nuevo elemento1, nuevoelemento2, etc.)
 
@@ -173,12 +173,53 @@ splice(indice de inicio, cantidad de elementos a eliminar, nuevo elemento1, nuev
         - Cantidad de elementos a eliminar: numero de elementos a borrar(segundo numero del parentesis)
             - elemento a agregar: los nuevos elementos que se agregan al arreglo(tercer elemento del parentesis)
 
-                * /
+*/
 
 let mesesDelAnio = ["Enero", "Febrero", "Agosto", "Septiembre"];
 console.log("Este es nuestro arrreglo de los meses del anio: ", mesesDelAnio);
 
 //Eliminar datos usando splice
-let mesesBorrados = mesesDelAnio.splice(2, 2, "Abril", "Mayo");
+mesesBorrados = mesesDelAnio.splice(2, 2, "Abril", "Mayo");
 console.log("Este es el nuevo arreglo con los meses borrados: ", mesesDelAnio);
 
+//Agregar elementos sin borrar nada del arreglo
+
+let diasSemana = ["Lunes", "Martes", "Miércoles"];
+console.log("Los días de la semana son:", diasSemana);
+
+diasSemana.splice(3,0,"Jueves","Viernes","Sábado");
+console.log("Los nuevos días de la semana son:",diasSemana);
+
+
+//MÉTODOS ACCESORES
+
+//length: Nos dice cuántos elementos tenemos en nuestro arreglo
+
+
+let ensalada = ["Jitomate", "zanahoria", "lechuga", "chícharos", "cebolla"];
+
+console.log("Tenemos estos elementos en el arreglo ensalada", ensalada.length); 
+
+//join(): Nos permite unir los elementos del arreglo en una cadena de texto 
+
+console.log("Esta es una feliensalada:", ensalada.join(" feli"));
+
+//concat(): NOs permite unir dos o más arreglos en uno solo. Y devuelve un nuevo arreglo con los elmeentos de los otros arreglos. 
+
+let dulces = ["galletas", "chetos", "glorias", "gansitos", "picafresas", "tamborines", "galletas"];
+
+let mezcla = ensalada.concat(dulces);
+
+console.log("Esta es mi mezcla:", mezcla);
+
+//indexOf(): Nos permite saber la posición de un elemento dentro de un arreglo
+
+console.log("Esta es la posición de los chetos en mi arreglo dulces:", dulces.indexOf("chetos"));
+
+//lastindexOf(): Nos permite saber la última posición de un elemento determinado dentro de un arreglo
+
+console.log("La última posición de las galletas es ", dulces.lastIndexOf("galletas"));
+
+//toString(): Convertir un arreglo a una línea de texto
+//valueOf(): El valor de un elemento
+//includes(): Para saber si un elemento existe dentro del arreglo 
