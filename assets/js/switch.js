@@ -24,8 +24,29 @@ function evalDate(dia) {
             return "Sábado";
             break;
         default: //Se usa por si se coloca un número inválido que no esté en un case.
-            return "Su fecha no es válida";
+            return "Su fecha no es válida"; //Y siempre va hasta el final
     }
 }
 
-alert(evalDate(dia));
+//alert(evalDate(dia)); Esto se pone para que imprima el día que es
+
+
+let nineros = prompt("Escriba su ingreso");
+
+function carritoCompras(nineros) {
+    switch (true) {
+        case (nineros <= 10):
+            return "Churrumais";
+            break;
+        case (nineros <= 50):
+            return "Churrumais + refresco";
+            break;
+        case (nineros <= 100):
+            return "Hamburguesa";
+            break;
+        default:
+            return "puedes comprar muchas cosas!";
+    }
+}
+
+alert(carritoCompras(nineros));
