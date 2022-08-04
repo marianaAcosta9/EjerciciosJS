@@ -40,10 +40,10 @@ console.log(listaDePerritos);
 
 razasGatos = ["Persa", "Siamés", "Esfinge", "Maine Coon", "Bengala", "Himalayo", "Savannah", "Angora", "Azul ruso", "Bombay"];
 
-listaDePeliculas = ["Jarhead", "Angela's Ashes", "The departed", 
-"In Brudges", "Sunshine", "Tokyo Drift"];
+listaDePeliculas = ["Jarhead", "Angela's Ashes", "The departed",
+    "In Brudges", "Sunshine", "Tokyo Drift"];
 
-equiposDeFutbol = ["America", "Barcelona", "MachesterCity", "PSG", "ACMilan", "Tigres", "Pueblita", "Ajax", "Bayern", "RealMadrid" ];
+equiposDeFutbol = ["America", "Barcelona", "MachesterCity", "PSG", "ACMilan", "Tigres", "Pueblita", "Ajax", "Bayern", "RealMadrid"];
 
 estadosDeLARepublicaMexicana = ["Jalisco", "Nayarit", "NuevoLeon", "Coca", "Durango", "Colima", "Queretaro", "QuintanaRoo", "Yucatan", "Zacatecas", "Aguascalientes"];
 
@@ -107,4 +107,78 @@ console.log("Estas son las publicaciones de Agosto:", publicacionRedSocial["fech
 
 /* MÉTODOS DE LOS ARRAYS
 
-En los arreglos tenemos ciertos métodos o instrucciones que nos van a permitir manipular los elementos de este arreglo. Estos nos permiten desde agregar y eliminar elementos, hasta reaordenarlos */
+En los arreglos tenemos ciertos métodos o instrucciones que nos van a permitir manipular los elementos de este arreglo. Estos nos permiten desde agregar y eliminar elementos, hasta reaordenarlos
+
+Podemos dividir estos métodos en 3:
+
+- Métodos transformadores: Permiten transformar nuestro arreglo
+- Métodos accesorios: permiten acceder a nuestro arreglo
+- Métodos repetitivos: Permiten recorrer el arreglo y hacer algo en específico con él.
+
+*/
+
+let arrayDeEjemplo = ["Manzanas", "Peras", "Mangos", "Mandarinas", "Uvas", "Sandía", "Fresas"];
+
+console.log("Este es nuestro arreglo original de 7 elementos", arrayDeEjemplo);
+
+//Métodos transformadores
+
+//push(): Agrega un elemnto al final del arreglo
+
+arrayDeEjemplo.push("Pitaya");
+
+console.log("Agregamos la Pitaya a nuestro arreglo de ejemplo:", arrayDeEjemplo);
+
+//pop(): Permite eliminar el último elemento de la regla
+
+arrayDeEjemplo.pop();
+
+console.log("Eliminamos el último elemento del arreglo de ejemplos:", arrayDeEjemplo);
+
+//unshift(): Agregamos uno o más elementos al inicio del arreglo
+
+arrayDeEjemplo.unshift("Plátanos", "Tunas", "Aguacate", "Lichi");
+
+console.log("Agregamos 4 elementos al principio del arreglo:", arrayDeEjemplo);
+
+//shift(): Elimina el primer elemento del arreglo
+
+arrayDeEjemplo.shift();
+
+console.log("Eliminamos el primer elemento del arreglo", arrayDeEjemplo);
+
+//sort(): Permite ordenar los elemntos del arreglo de forma ascendente
+
+arrayDeEjemplo.sort();
+
+console.log("Ordenamos ascendentemente el arreglo de ejemplo:", arrayDeEjemplo);
+
+//reverse(): Invertimos el orden del arreglo
+
+arrayDeEjemplo.reverse();
+
+console.log("Invertimos el orden del arreglo", arrayDeEjemplo);
+
+//slice(): Extraemos una sección del arreglo o cadena, y devuelve una cadena nueva, copiando el arreglo (no se modifica nada, sino que creamos una copia)
+
+let saludo1 = "Hola, estoy aprendiendo arreglos en Generation";
+let saludo2 = saludo1.slice(3, 7);
+console.log("Imprimimos la rebanada del arreglo original", saludo2);
+
+Sintaxis basica
+
+splice(indice de inicio, cantidad de elementos a eliminar, nuevo elemento1, nuevoelemento2, etc.)
+
+    - Indice de inicio: la posicion desde donde comenzamos a eliminar elementos(primer numero dentro del parentesis)
+        - Cantidad de elementos a eliminar: numero de elementos a borrar(segundo numero del parentesis)
+            - elemento a agregar: los nuevos elementos que se agregan al arreglo(tercer elemento del parentesis)
+
+                * /
+
+let mesesDelAnio = ["Enero", "Febrero", "Agosto", "Septiembre"];
+console.log("Este es nuestro arrreglo de los meses del anio: ", mesesDelAnio);
+
+//Eliminar datos usando splice
+let mesesBorrados = mesesDelAnio.splice(2, 2, "Abril", "Mayo");
+console.log("Este es el nuevo arreglo con los meses borrados: ", mesesDelAnio);
+
