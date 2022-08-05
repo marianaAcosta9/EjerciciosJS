@@ -187,8 +187,8 @@ console.log("Este es el nuevo arreglo con los meses borrados: ", mesesDelAnio);
 let diasSemana = ["Lunes", "Martes", "Miércoles"];
 console.log("Los días de la semana son:", diasSemana);
 
-diasSemana.splice(3,0,"Jueves","Viernes","Sábado");
-console.log("Los nuevos días de la semana son:",diasSemana);
+diasSemana.splice(3, 0, "Jueves", "Viernes", "Sábado");
+console.log("Los nuevos días de la semana son:", diasSemana);
 
 
 //MÉTODOS ACCESORES
@@ -198,7 +198,7 @@ console.log("Los nuevos días de la semana son:",diasSemana);
 
 let ensalada = ["Jitomate", "zanahoria", "lechuga", "chícharos", "cebolla"];
 
-console.log("Tenemos estos elementos en el arreglo ensalada", ensalada.length); 
+console.log("Tenemos estos elementos en el arreglo ensalada", ensalada.length);
 
 //join(): Nos permite unir los elementos del arreglo en una cadena de texto 
 
@@ -221,5 +221,105 @@ console.log("Esta es la posición de los chetos en mi arreglo dulces:", dulces.i
 console.log("La última posición de las galletas es ", dulces.lastIndexOf("galletas"));
 
 //toString(): Convertir un arreglo a una línea de texto
+console.log(mezcla.toString());
+
 //valueOf(): El valor de un elemento
+console.log(mezcla.valueOf());
+
 //includes(): Para saber si un elemento existe dentro del arreglo 
+console.log("Así podemos saber si un elemento está dentro del arreglo ", mezcla.includes("cacahuates"));
+
+/* Métodos Repetidores
+filter (): Recorre el array y devuelve uno nuevo con los elementos que cumplan la condición (bucle).
+*/
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log("Numeros del 1 al 10", numeros);
+
+let numeros1a15 = numeros.filter(numeros => numeros < 5);
+console.log("Estos son losnúmeros que cumplen la condición de ser menores a 5", numeros1a15);
+
+let numerosDel6al9 = numeros.filter(numeros => (numeros > 5 && numeros < 10));
+console.log("Estos son los números que son mayores que 5 y menores que 10", numerosDel6al9);
+
+//map (): permite recorrer el arreglo, modificar los elementos presentes en él y retornar esos valores modificados en uno nuevo con la misma longitud que el arreglo original. 
+
+let map = numeros.map(numeros => numeros * 3);
+console.log("Estos son los numeros multiplicados por 3", map);
+
+// Ejercicio improvisado de tablas del 1 al 10
+
+let arregloBase = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let tabla2 = arregloBase.map(arregloBase => arregloBase * 2);
+console.log("Esta es la tabla del 2", tabla2);
+
+let tabla3 = arregloBase.map(arregloBase => arregloBase * 3);
+console.log("Esta es la tabla del 3", tabla3);
+
+/* forEach(): Este método nos permite llamar a una función "callback" específica una vez por cada elemnto sobre el que se itera del array. Al igual que otros iteradores como el map o el filter, este método recibe algunos parámetros:
+
+- Elemento actual: Elemento del arreglo que se va a evaluar o sobre el que se hace la iteración.
+
+- Índice: Posición que tiene el elemento dentro del arreglo.
+- Arreglo objetivo: Es el arreglo por el cual se está haciendo esta iteración
+
+ESTE MÉTODO NO CAMIA EL ARREGLO ORIGINA, DEVUELVE UNO NUEVO CON LOS ELEMENTOS MODIFICADOS
+*/
+
+// Ejemplo para remover el primer número impar de un arreglo
+
+let listaNumeros = [3, 6, 8, 10, 12];
+let impar = 3;
+
+listaNumeros.forEach(function (numero){
+    if (numero === impar) {
+        listaNumeros.shift();
+    }
+});
+
+console.log("Imprime la lista de números aplicando la función de quitar el número impar", listaNumeros);
+
+
+// BUCLES 
+ 
+
+/*Bucles
+
+En JS, los bucles o loops son utilizados para realizar tareas repetitivas con base en una condición. Las condiciones normalemente devuelven un true o false al ser evaluados, además de que el bucle continuará ejecutándose hasta que la condición devuelva un false.
+
+Normalmente tenemos 3 ciclos
+    1. While (mientras)
+    2- Do while (hacer mientras)
+    3. For (para)
+
+Tenemos otras sentencias más específicas:
+
+    1. for in: Sirve para recorrer un arreglo y por cada uno de los elementos de este arreglo obtenemos LA POSICIÓN
+    2. for off: sirve para recorrer un arreglo y por cada uno de los elementos de este arreglo obtenemos SU VALOR.
+
+ */
+
+
+/*
+
+Sentencia WHILE (mientras)
+
+Esta sentencia nos va a permitr recorrer un bloque de codigo SIEMPRE que se cumpla una condicion especifica, donde el resultado debe ser true
+
+la estructura de WHOLE es:
+
+palabraReservada while (condicion que tiene que ser true) {
+    //codigo a ejecutar
+}
+
+
+EJEMPLO DE PROGRAMA PARA SUMAR NÚMEROS
+
+*/
+
+let numeroParaSumar = 0;
+while (numeroParaSumar <10){
+    console.log("El número es menor a 10");
+}
+
