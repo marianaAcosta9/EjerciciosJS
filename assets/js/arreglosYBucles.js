@@ -338,7 +338,7 @@ while (valorInicial < 5) { //Mientras el valor inicial sea menor a 5
 //Práctica grupal: Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares (desde 1 hasta ese número).
 
 let numeroInicial = 1
-let numeroFinal = prompt("Escribe un número entero positivo");
+let numeroFinal = 5
 
 while (numeroInicial <= numeroFinal) {
     if (numeroInicial % 2 != 0) {
@@ -365,4 +365,92 @@ Nuestro número inicial vale 3
 Entonces dividimos 3 entre 2. El residuo es diferente de 0? Sí
 Entonces se imprime
 Posteriormente se le suma 1 al número que se tenía
-Ahora el número inicial es 4.
+Ahora el número inicial es 4. */
+
+
+
+//DO WHILE (HACER MIENTRAS O HACER HASTA)
+
+/*
+El bucle do while nos sirve para ejecutar una sentencia especificada hasta que la condición de aprobación se evalúa como falsa. La condición se evalúa después de ejecutar la sentencia, dando como resultado que la sentencia especificada se ejecuta al menos una vez.
+
+En pocas palabras, con el while preguntamos una vez, evaluamos la condición y ejecutamos la instrucción. Con el do while, ejecutamos la instrucción al menos una vez, y luego preguntamos la condición.
+
+Estructura básica de un do while:
+
+palabraReservada do {
+    //Código a ejecutar
+}
+while (condicion);
+
+*/
+
+//Ejemplo 1
+
+let numerito = 0; //Declaramos la variable en 0
+do{// esto se hará...
+    console.log("El número es: " + numerito); //Imprimir el número
+    numerito ++; //Aumentamos de uno en uno
+}
+
+while (numerito <= 10); //...hasta que el número sea menor o igual a 10
+
+//while vs doWhile
+
+console.log("while");
+
+let numeroWhile = 0;
+
+while(numeroWhile <5){
+    numeroWhile++;
+    console.log(numeroWhile);
+}
+
+
+console.log("doWhile");
+
+let numeroDoWhile = 0;
+do{
+    console.log(numeroDoWhile);
+    numeroDoWhile ++;
+}
+while (numeroDoWhile<5);
+
+//SENTENCIA FOR
+ /* Este ciclo sirve para iterar sobre una sección de una variable.
+ 
+ Es diferente al while por que le podemos pasar una lista de valores y ejecutar una vez por cada uno de ellos. Para esto tenemos tres elementos:
+ 
+ 1. El valor inicial de la variable que vamos a iterar (i = 0)
+ 2. La condición que tiene que cumplirse para que el bucle se siga ejecutando (i <5)
+ 3. La operación que se realiza una vez que termina el bucle (i++)
+
+ Estructura básica del for
+
+ for (valor inicial, condicion, operacion)
+
+ Ejemplo
+ */
+
+ console.log("For");
+
+ for(let i=0; i<10; i++){
+    console.log(i);
+ }
+
+ //let i=0 es mi valor inicial
+ // i<5 establece la condición para que el bucle se siga ejecutando
+ // i++ incrementa el valor en 1
+
+ let animalitosDelBosque = ["ardillas", "conejos", "venados", "osos", "mariposas"];
+
+ //in: posiciones EN el arreglo
+
+ for (posiciones in animalitosDelBosque){
+    console.log(posiciones)
+ }
+
+ //of: valores DEL arreglo
+ for (valores of animalitosDelBosque){
+    console.log(valores)
+ }
