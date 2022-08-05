@@ -272,7 +272,7 @@ ESTE MÉTODO NO CAMIA EL ARREGLO ORIGINA, DEVUELVE UNO NUEVO CON LOS ELEMENTOS M
 let listaNumeros = [3, 6, 8, 10, 12];
 let impar = 3;
 
-listaNumeros.forEach(function (numero){
+listaNumeros.forEach(function (numero) {
     if (numero === impar) {
         listaNumeros.shift();
     }
@@ -282,7 +282,7 @@ console.log("Imprime la lista de números aplicando la función de quitar el nú
 
 
 // BUCLES 
- 
+
 
 /*Bucles
 
@@ -318,8 +318,51 @@ EJEMPLO DE PROGRAMA PARA SUMAR NÚMEROS
 
 */
 
+/* ALERTA, ESTE PROGRAMA EXPLOTA LA COMPUTADORA
+
 let numeroParaSumar = 0;
 while (numeroParaSumar <10){
     console.log("El número es menor a 10");
 }
+*/
 
+let valorInicial = 0; //Declaramos un valor inicial en 0
+while (valorInicial < 5) { //Mientras el valor inicial sea menor a 5
+    valorInicial++; //ejecutamos este bloque de código (sumar 1)
+    console.log(valorInicial); //Imprimimos los resultados
+}
+
+
+//La sentencia while se ejecuta mientras se sigan obteniendo resultados positivos (true), y hasta que el resultado sea false, se para.
+
+//Práctica grupal: Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares (desde 1 hasta ese número).
+
+let numeroInicial = 1
+let numeroFinal = prompt("Escribe un número entero positivo");
+
+while (numeroInicial <= numeroFinal) {
+    if (numeroInicial % 2 != 0) {
+        console.log(numeroInicial);
+    }
+    numeroInicial ++;
+};
+
+/* Ingresamos un 5
+
+Nuestro número inicial vale 1
+Entonces dividimos 1 entre 2. El residuo es diferente de 0? Sí
+Entonces se imprime
+Posteriormente se le suma 1 al número que se tenía
+Ahora el número inicial es 2.
+
+Nuestro número inicial es 2
+Entonces dividimos 2 entre 2. El residuo es diferente de 0? No
+Entonces NO se imprime. 
+Posteriormente se le suma 1 al número que se tenía (2)
+Ahora el número inicial es 3.
+
+Nuestro número inicial vale 3
+Entonces dividimos 3 entre 2. El residuo es diferente de 0? Sí
+Entonces se imprime
+Posteriormente se le suma 1 al número que se tenía
+Ahora el número inicial es 4.
