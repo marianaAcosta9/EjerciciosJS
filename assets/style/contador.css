@@ -1,0 +1,37 @@
+body{
+    background-color:teal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    color: bisque;
+}
+
+h2 {
+    font-size: 40px;
+    color:lightpink
+}
+
+.container {
+    text-align: center;
+}
+
+.container button {
+    color: antiquewhite;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#incrementar{
+    background-color:deeppink;
+}
+
+#resetear {
+    background-color: blueviolet;
+}
+
+#decrementar {
+    background-color:tomato
+}
