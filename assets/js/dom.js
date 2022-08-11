@@ -35,4 +35,14 @@ Con JavaScript podemos cambiar:
 -Reaccionar a todos los elementos HTML que existen en la página
 -Crear nuevos eventos HTML en la página
 
+Métodos de selección de elementos
+
+Son elementos que nos van a permitir seleccionar uno o varios elementos del DOM. Estos métodos se utilizan en el document, por que se agrega antes del get.
+
 */
+
+//A continuación como ejemplo de cómo agregar texto por medio de JS a una etiqueta que ya está establecida en index.html
+
+//let parrafo = "Hola Generation";
+//let parrafo2 = document.getElementById("parrafo");
+const cambioDeParrafo = document.getElementById("parrafo2").innerHTML = "Quiero Chilaquiles"; //innerHTML nos permite introducir información dentro del HTML
