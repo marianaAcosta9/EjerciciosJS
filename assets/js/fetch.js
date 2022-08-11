@@ -223,7 +223,7 @@ el dato que le solicitamos
 fetchPokemon(25): este es un ejemplo, puedes cambiar el numero, depende del numero que se
 introduzca, es la informacion que obtendremos de un Pokemon en especifico, en este caso
 Pikcachu
-Nota extra: ya tiene todo y formato, solo es cuestion de copiar y pegar :)
+
 */
 
 
@@ -232,6 +232,7 @@ async function fetchPokemon2(id){
     // fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     // .then(respuesta => respuesta.json())
     // .then(dato => console.log(dato));
+    //LO ANTERIOR ES LO MISMO QUE LAS SIGUIENTES TRES LÍNEAS. 
 
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
     const datos = await response.json();
@@ -258,10 +259,66 @@ let id = 1;
 setInterval(() => {
     fetchPokemon4(id);
     id++;
-    if (id > 5) { //Esto se pone para que tenga un limite y vuelva a empezar
+    if (id > 20) { //Esto se pone para que tenga un limite y vuelva a empezar
         id = 1;
     }
 }, 2000);
 // fetchPokemon4(810);
 
 //agregar un boton cambiar y al dar clic que pida que ingreses un numero y luego cambiar pokemon.
+
+
+ // //Solicitud GET 
+    // fetch("https://fakestoreapi.com/products/10") //realizamos la peticion a una URL
+    // .then((datos) => {
+    //   //cuando la promesa es resuelta, entonces ejecutamos esta funcion
+    //   return datos.json(); //convertimos la respuesta a un formato JSON
+    // })
+    // .then((info) => {
+    //   //cuando la promesa es resuelta, entonces ejecutamos esta funcion. Estamos usando el metodo .then para obtener la respuesta de la promesa y guardarla en la variable info. Gracias a esto podre obtener la informacion que queremos.
+    //   console.log(
+    //     "El nombre de nuestro producto es:",
+    //     info.title,
+    //     " y su precio es: ",
+    //     info.price
+    //   ); //imprimimos el nombre del producto. esto es posible por que la respuesta ya esta en formato JSON, y podemos acceder a los datos directamente, especificando el nombre del campo que queremos.
+    // });
+
+
+    
+    //Solicitud POST para enviar informacion
+    fetch('https://fakestoreapi.com/products',{
+            method:"POST", //por default es GET, para cambiarlo debemos especificar el metodo
+            body:JSON.stringify(//como la informacion que voy a manejar es un objeto, necesito convertirlo a un texto (string)
+            
+            //cuerpo de la solicitud    
+                {
+                    title: 'Chettos Naranjas',
+                    price: 3.0,
+                    description: 'Deliciosos Chettos Naranjas',
+                    image: 'https://i.pravatar.cc',
+                    category: 'jewelery'
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+
+
+        //Solicitud POST para enviar informacion
+    fetch('https://fakestoreapi.com/products',{
+        method:"POST", //por default es GET, para cambiarlo debemos especificar el metodo
+        body:JSON.stringify(//como la informacion que voy a manejar es un objeto, necesito convertirlo a un texto (string)
+        
+        //cuerpo de la solicitud    
+            {
+                title: 'Cacahuates',
+                price: 3.0,
+                description: 'Deliciosos Cacahuates Saladitos',
+                image: 'https://i.pravatar.cc',
+                category: 'jewelery'
+            }
+        )
+    })
+        .then(res=>res.json())
+        .then(json=>console.log(json))
